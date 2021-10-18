@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="7" skipped="0" tests="7" time="1.394" timestamp="2021-10-18T15:43:19.931258" hostname="gordiienko-mbp"><testcase classname="test_JokeAPI" name="test_status_code_200" time="0.001"><failure message="NameError: name 'response' is not defined">@pytest.mark.smoke
+    def test_status_code_200():
+&gt;       assert response.status_code, 200
+E       NameError: name 'response' is not defined
+
+test_JokeAPI.py:18: NameError</failure></testcase><testcase classname="test_JokeAPI" name="test_header_if_application_json" time="0.001"><failure message="NameError: name 'response' is not defined">@pytest.mark.smoke
+    def test_header_if_application_json():
+        expected = "application/json; charset=utf-8"
+&gt;       actual = response.headers["Content-Type"]
+E       NameError: name 'response' is not defined
+
+test_JokeAPI.py:24: NameError</failure></testcase><testcase classname="test_JokeAPI" name="test_availability_contents_in_response_body" time="0.000"><failure message="AttributeError: module 'json' has no attribute 'keys'">@pytest.mark.regression
+    def test_availability_contents_in_response_body():
+        key = 'contents'
+&gt;       actual = key in json.keys()
+E       AttributeError: module 'json' has no attribute 'keys'
+
+test_JokeAPI.py:31: AttributeError</failure></testcase><testcase classname="test_JokeAPI" name="test_availability_success_in_response_body" time="0.000"><failure message="AttributeError: module 'json' has no attribute 'keys'">@pytest.mark.regression
+    def test_availability_success_in_response_body():
+        key = "success"
+&gt;       actual = key in json.keys()
+E       AttributeError: module 'json' has no attribute 'keys'
+
+test_JokeAPI.py:38: AttributeError</failure></testcase><testcase classname="test_JokeAPI" name="test_category_jod_in_responce_body" time="0.000"><failure message="TypeError: 'module' object is not subscriptable">@pytest.mark.regression
+    def test_category_jod_in_responce_body():
+&gt;       actual = json['contents']["categories"][0]["name"]
+E       TypeError: 'module' object is not subscriptable
+
+test_JokeAPI.py:44: TypeError</failure></testcase><testcase classname="test_JokeAPI" name="test_total_number_of_categories" time="0.001"><failure message="TypeError: 'module' object is not subscriptable">@pytest.mark.regression
+    def test_total_number_of_categories():
+&gt;       actual = len(json["contents"]["categories"])
+E       TypeError: 'module' object is not subscriptable
+
+test_JokeAPI.py:51: TypeError</failure></testcase><testcase classname="test_JokeAPI" name="test_description_isString" time="0.000"><failure message="TypeError: 'module' object is not subscriptable">@pytest.mark.smoke
+    def test_description_isString():
+&gt;       actual = type(json["contents"]["categories"][0]["description"])
+E       TypeError: 'module' object is not subscriptable
+
+test_JokeAPI.py:58: TypeError</failure></testcase></testsuite></testsuites>

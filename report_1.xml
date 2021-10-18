@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="4" time="1.688" timestamp="2021-10-18T11:18:36.857668" hostname="gordiienko-mbp"><testcase classname="test_JokeAPI" name="test_status_code_200" time="0.001" /><testcase classname="test_JokeAPI" name="test_if_appplication_json" time="0.001" /><testcase classname="test_JokeAPI" name="test_contents_jsonForm" time="0.001"><failure message="assert False == True">def test_contents_jsonForm():
+        key = 'contents'
+        actual = key in json.keys()
+&gt;       assert actual == True
+E       assert False == True
+
+test_JokeAPI.py:30: AssertionError</failure></testcase><testcase classname="test_JokeAPI" name="test_category_jod_in_responce_body" time="0.001"><failure message="KeyError: 'contents'">def test_category_jod_in_responce_body():
+&gt;       actual = json['contents']["jokes"][0]["category"]
+E       KeyError: 'contents'
+
+test_JokeAPI.py:34: KeyError</failure></testcase></testsuite></testsuites>

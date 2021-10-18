@@ -1,0 +1,4 @@
+requests>=2.19.1
+pytest>=3.6.3
+allure-pytest>=2.5.1
+pytest-logger=>0.4.0

@@ -1,0 +1,19 @@
+! Run all commands inside the test's directory !
+
+1. To run all tests:
+> pytest test_JokeAPI.py
+
+2. To run tests by name:
+> pytest test_JokeAPI.py -rA -k login
+
+3. To run test in parallel (n=> numbers of threads):
+> pytest test_JokeAPI.py -n 3
+
+4. To run selected tests using markers "Smoke" or "Regression":
+> pytest test_JokeAPI.py -m smoke
+
+5. To run and generate xml report:
+> pytest test_JokeAPI.py --junitxml="Report_after_interview.xml"
+
+6. To run and generate html report:
+> pytest test_JokeAPI.py --html="Report_after_interview.html"
